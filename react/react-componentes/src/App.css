@@ -52,6 +52,7 @@ main {
   border-width: thin;
   align-items: start;
   justify-items: stretch;
+  padding:1rem;
 }
 
 footer {
@@ -71,4 +72,16 @@ footer {
 
 h4 {
   margin-left: 20px;
+}
+
+.card-video-info-usuario{
+  display:flex;
+  justify-content: center;
+  gap:0.2rem;
+  height: 4rem;
+}
+
+.card-video-info-usuario img{
+  height: 100%;
+  width: 4rem;
 }
