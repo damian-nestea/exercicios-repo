@@ -1,6 +1,8 @@
 import React from "react";
-import CardVideo from "./Componentes/CardVideo";
-import "./styles.css";
+import { Header } from "./Componentes/Header/Header";
+import { Footer } from "./Componentes/Footer/Footer";
+import { MainContent } from "./Componentes/MainContent/MainContent";
+import { GlobalStyle } from "./GlobalStyle"; 
 
 export default function App() {
   const card1 = {
@@ -11,36 +13,15 @@ export default function App() {
 
   return (
     <div>
+      <GlobalStyle />
       <div className="tela-inteira">
-        <header>
-          <h1>LabeTube</h1>
-          <input type="text" placeholder="Busca" id="campoDeBusca" />
-        </header>
-
-        <main>
-          <nav className="menu-vertical">
-            <ul>
-              <li className="botoes-meunu-vertical">Início</li>
-              <li className="botoes-meunu-vertical">Em alta</li>
-              <li className="botoes-meunu-vertical">Inscrições</li>
-              <hr />
-              <li className="botoes-meunu-vertical">Originais</li>
-              <li className="botoes-meunu-vertical">Histórico</li>
-            </ul>
-          </nav>
-
-          <section className="painel-de-videos">
-            <CardVideo
-              image1={card1.imagemDoVideo}
-              titulo={card1.titulo}
-              textoAlternativo={card1.textoAlternativo}
-            />
-          </section>
-        </main>
-
-        <footer>
-          <h4>Oi! Eu moro no footer!</h4>
-        </footer>
+        <Header />
+          <MainContent 
+            image1={card1.imagemDoVideo}
+            titulo={card1.titulo}
+            textoAlternativo={card1.textoAlternativo}
+          />
+        <Footer />
       </div>
     </div>
   );
