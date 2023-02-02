@@ -1,8 +1,7 @@
 import React from "react";
-import CardVideo from "./Componentes/CardVideo";
 import { Header } from "./Componentes/Header/Header";
 import { Footer } from "./Componentes/Footer/Footer";
-import { MenuVertical } from "./Componentes/MenuVertical/MenuVertical";
+import { MainContent } from "./Componentes/MainContent/MainContent";
 import { GlobalStyle } from "./GlobalStyle"; 
 
 export default function App() {
@@ -17,18 +16,11 @@ export default function App() {
       <GlobalStyle />
       <div className="tela-inteira">
         <Header />
-        <main>
-          <MenuVertical />
-
-          <section className="painel-de-videos">
-            <CardVideo
-              image1={card1.imagemDoVideo}
-              titulo={card1.titulo}
-              textoAlternativo={card1.textoAlternativo}
-            />
-          </section>
-        </main>
-
+          <MainContent 
+            image1={card1.imagemDoVideo}
+            titulo={card1.titulo}
+            textoAlternativo={card1.textoAlternativo}
+          />
         <Footer />
       </div>
     </div>
