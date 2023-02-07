@@ -29,3 +29,19 @@ export const EvolveButton = styled.button`
     box-shadow: 0 6px 30px -10px #000000;
 
 `
+
+export const ChangeButton = styled.button`
+    background-color: #FFF;
+    padding: 0.5rem;
+    margin: 16px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 6px 30px -10px #000000;
+
+`
+
+export const Imagem = styled.img`
+    width: 100%;
+
+`
