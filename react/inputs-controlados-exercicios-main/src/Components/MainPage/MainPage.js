@@ -10,7 +10,11 @@ const MainPage = () => {
   const [nome, setNome] = useState("");
   const [idade, setIdade] = useState("");
   const [email, setEmail] = useState("");
+  const [confirmaEmail, setConfirmaEmail] = useState("");
   //3.1 crie aqui os estados dataNascimento, telefone e cidade para o exercício 3
+  const [dataNascimento, setDataNascimento] = useState("");
+  const [telefone , setTelefone] = useState("");
+  const [cidade , setCidade] = useState("");
 
   const onChangeNome = (event) => {
     setNome(event.target.value);
@@ -22,6 +26,22 @@ const MainPage = () => {
 
   const onChangeEmail = (event) => {
     setEmail(event.target.value);
+  };
+
+  const onChangeConfirmaEmail = (event) => {
+    setConfirmaEmail(event.target.value);
+  };
+
+  const onChangeDataNascimento = (event) => {
+    setDataNascimento(event.target.value);
+  };
+
+  const onChangeTelefone = (event) => {
+    setTelefone(event.target.value);
+  };
+
+  const onChangeCidade = (event) => {
+    setCidade(event.target.value);
   };
 
   //3.2 Crie aqui as funções de onChange do exercício 3
@@ -43,21 +63,32 @@ const MainPage = () => {
           nome={nome}
           idade={idade}
           email={email}
+          confirmaEmail={confirmaEmail}
           onChangeNome={onChangeNome}
           onChangeIdade={onChangeIdade}
           onChangeEmail={onChangeEmail}
+          onChangeConfirmaEmail = {onChangeConfirmaEmail}
           sendData={sendData}
         />
       );
     } else if (formFlow === 2) {
       return (
         <ConfirmationForm
+          dataNascimento = {dataNascimento}
+          cidade = {cidade}
+          telefone = {telefone}
+          onChangeDataNascimento = {onChangeDataNascimento}
+          onChangeTelefone = {onChangeTelefone}
+          onChangeCidade = {onChangeCidade}
           sendForm={sendForm}
+          
           //3.3 passe as props do exercicio 3 aqui
         />
       );
     } else {
-      return <ConfirmationPage />;
+      return <ConfirmationPage
+        data = {data}
+      />;
     }
   };
 
