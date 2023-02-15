@@ -1,10 +1,15 @@
-import {TitleHeader} from './styled'
+import {TitleHeader , ImagemPerfil} from './styled'
+import React from 'react'
 
-export const Header = () => {
+export const Header = ({newLoginNome , newLoginImagem ,pageFlow}) => {
 
+/*     const verificaLogin = pageFlow === 1? false:true; */
+    
     return(
         <TitleHeader>
-            Insta4
+            Instagram
+            <p>{newLoginNome}</p>
+            <ImagemPerfil src = {newLoginImagem} alt="Imagem perfil" />
         </TitleHeader>
     )
 }

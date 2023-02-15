@@ -7,20 +7,18 @@ import {
   StyledLabel,
 } from "../FormularioPostagem/styled";
 
-const FormularioLogin = (props) => {
-  const login = () => {
-    props.setPageFlow(2);
-  };
+const FormularioLogin = ({inputNome , inputFotoPerfil , onChangeNome , onChangeFotoPerfil , login}) => {
+
   return (
     <FormContainer>
       <Form>
         <StyledLabel>
           Nome:
-          <Input type={"text"} />
+          <Input onChange={onChangeNome} value={inputNome} type={"text"} />
         </StyledLabel>
         <StyledLabel>
           Foto de Perfil
-          <Input type={"text"} />
+          <Input onChange={onChangeFotoPerfil} value={inputFotoPerfil} type={"text"} />
         </StyledLabel>
         <SendButton onClick={login}>Fazer Login</SendButton>
       </Form>

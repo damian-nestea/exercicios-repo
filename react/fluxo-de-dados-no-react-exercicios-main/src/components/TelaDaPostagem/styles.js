@@ -11,6 +11,7 @@ export const ContainerPostagem = styled.div`
 `
 
 export const Image = styled.img`
+    width:20rem;
     border-radius: 0.5rem;
     overflow: hidden;
     margin: 2rem 0;
